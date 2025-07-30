@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#SBATCH --job-name=feat_squeeze
+#SBATCH --output=/data/project/SPAIN/derivatives/squeeze/code/02_subject_level/logs/%A_%a.out
+#SBATCH --export=none
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=2G
+#SBATCH --time=3-6:00
+#SBATCH --array=1-120%10
+
+source /software/system/modules/latest/init/bash
+module use /software/system/modules/NaN/generic
+module purge
+module load nan
+module load fsl
+
+index=/data/project/SPAIN/derivatives/squeeze/code/02_subject_level/index
+
+echo "Running on $HOSTNAME"
+echo "Array ID: $SLURM_ARRAY_JOB_ID"
+echo "Task ID: $SLURM_ARRAY_TASK_ID"
+
+file="`awk FNR==$SLURM_ARRAY_TASK_ID $index`"
+
+echo "Processing $file"
+
+feat $file
+
+echo "Complete"
