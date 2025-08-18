@@ -1,6 +1,6 @@
 # Path of the folder containing all data
-dir="/data/project/SPAIN/derivatives/squeeze"
-sct_dir="/nan/ceph/network/system/el8/sct/6.5"
+dir="/root/dir"
+sct_dir="/sct/dir/6.5"
 
 for file in `ls ${dir}/derivatives/group_level/data_stacks/cope*stack.nii.gz`; do
     # Extract the filename without path
