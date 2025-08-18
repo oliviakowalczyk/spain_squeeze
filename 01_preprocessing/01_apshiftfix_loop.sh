@@ -1,4 +1,4 @@
-dir="/data/project/SPAIN/derivatives/squeeze/"
+dir="/root/dir"
 
 declare -a data=("sub-SPAIN01_ses-B_task-squeeze_run-2_bold.nii.gz"
 "sub-SPAIN02_ses-A_task-squeeze_run-1_bold.nii.gz"
