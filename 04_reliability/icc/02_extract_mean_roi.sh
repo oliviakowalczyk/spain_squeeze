@@ -1,5 +1,5 @@
 # Path of the folder containing all data
-dir="/data/project/SPAIN/derivatives/squeeze"
+dir="/root/dir"
 
 # Threshold t-stat image with FWE-corr TFCE map
 fslmaths ${dir}/derivatives/group_level/randomise_first_trial_censored_run-1-avg/cope1/one_sampt_tfce_corrp_tstat1.nii.gz \
