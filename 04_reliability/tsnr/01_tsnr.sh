@@ -1,5 +1,5 @@
 # Path of the folder containing all data
-dir="/data/project/SPAIN/derivatives/squeeze"
+dir="/root/dir"
 tsnr_dir="${dir}/derivatives/tsnr/"
 output_csv="${tsnr_dir}/tsnr.csv"
 
