@@ -30,7 +30,7 @@ set fmri(featwatcher_yn) 1
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "/data/project/SPAIN/derivatives/squeeze/derivatives/subject_level/sub_no_ses_no_run_no_first_trial_censored"
+set fmri(outputdir) "/dir/derivatives/subject_level/sub_no_ses_no_run_no_first_trial_censored"
 
 # TR(s)
 set fmri(tr) 2.500000
@@ -136,7 +136,7 @@ set fmri(prewhiten_yn) 1
 # 0 : No
 # 1 : Yes
 set fmri(motionevs) 0
-set fmri(motionevsbeta) "/data/project/SPAIN/derivatives/squeeze/derivatives/phys/sub_no/ses_no/run_no/pnm_evlist_mc.txt"
+set fmri(motionevsbeta) "/dir/derivatives/phys/sub_no/ses_no/run_no/pnm_evlist_mc.txt"
 set fmri(scriptevsbeta) ""
 
 # Robust outlier detection in FLAME?
@@ -276,13 +276,13 @@ set fmri(fnirt_config) "T1_2_MNI152_2mm"
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/data/project/SPAIN/derivatives/squeeze/derivatives/preprocessing/sub_no/ses_no/run_no/chop_MCnofilt_smooth22"
+set feat_files(1) "/dir/derivatives/preprocessing/sub_no/ses_no/run_no/chop_MCnofilt_smooth22"
 
 # Add confound EVs text file
 set fmri(confoundevs) 1
 
 # Confound EVs text file for analysis 1
-set confoundev_files(1) "/data/project/SPAIN/derivatives/squeeze/code/02_subject_level/first_trial_censored/timings/first_trial_censored.txt"
+set confoundev_files(1) "/dir/code/02_subject_level/first_trial_censored/timings/first_trial_censored.txt"
 
 # EV 1 title
 set fmri(evtitle1) "squeeze"
@@ -317,7 +317,7 @@ set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 1
 
 # Custom EV file (EV 1)
-set fmri(custom1) "/data/project/SPAIN/derivatives/squeeze/code/02_subject_level/first_trial_censored/timings/squeeze_timings.txt"
+set fmri(custom1) "/dir/code/02_subject_level/first_trial_censored/timings/squeeze_timings.txt"
 
 # Orthogonalise EV 1 wrt EV 0
 set fmri(ortho1.0) 0
