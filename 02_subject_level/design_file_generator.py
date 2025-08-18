@@ -8,7 +8,7 @@ import os
 import glob
 
 # directory where your study lices
-root_dir = "/root/dir"
+dir = "/root/dir"
 
 # path to where the sub-SPAIN## directories live
 study_dir = os.path.join(root_dir, "derivatives/preprocessing/")
@@ -29,7 +29,7 @@ for dir in list(sub_dirs):
   print(run_no)
   
   # replace the variables in your template design.fsf with the ones generated above
-  replacements = {'sub_no':sub_no, 'ses_no':ses_no, 'run_no':run_no}
+  replacements = {'sub_no':sub_no, 'ses_no':ses_no, 'run_no':run_no, 'dir':dir}
   with open("%s/design_template.fsf"%(fsf_dir)) as infile: 
     with open("%s/design_%s_%s_%s.fsf"%(fsf_dir, sub_no, ses_no, run_no), 'w') as outfile:
         for line in infile:
