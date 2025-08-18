@@ -11,10 +11,10 @@ import glob
 dir = "/root/dir"
 
 # path to where the sub-SPAIN## directories live
-study_dir = os.path.join(root_dir, "derivatives/preprocessing/")
+study_dir = os.path.join(dir, "derivatives/preprocessing/")
 
 # path to where all fsf files will live
-fsf_dir = os.path.join(root_dir, "code/02_subject_level/design_files/")
+fsf_dir = os.path.join(dir, "code/02_subject_level/design_files/")
 
 # get paths to your data folders
 sub_dirs = glob.glob("%s/sub-SPAIN[0-9][0-9]/ses-[A,B]/run-[1,2]"%(study_dir))
