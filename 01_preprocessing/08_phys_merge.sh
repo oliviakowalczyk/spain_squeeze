@@ -1,5 +1,5 @@
 # Paths
-dir="/data/project/SPAIN/derivatives/squeeze/derivatives/phys"
+dir="/root/dir"
 
 # List of subjects
 declare -a sub=("sub-SPAIN01" "sub-SPAIN02" "sub-SPAIN04" "sub-SPAIN06" "sub-SPAIN07" "sub-SPAIN08" "sub-SPAIN11" "sub-SPAIN13" "sub-SPAIN15" "sub-SPAIN16" "sub-SPAIN19" "sub-SPAIN20" "sub-SPAIN21" "sub-SPAIN24" "sub-SPAIN25" "sub-SPAIN26" "sub-SPAIN27" "sub-SPAIN28" "sub-SPAIN30" "sub-SPAIN31" "sub-SPAIN32" "sub-SPAIN36" "sub-SPAIN38" "sub-SPAIN39" "sub-SPAIN40" "sub-SPAIN41" "sub-SPAIN44" "sub-SPAIN49" "sub-SPAIN52" "sub-SPAIN55")
@@ -19,7 +19,7 @@ for i in "${sub[@]}"; do
         echo $raw_phys
         echo $triggers
 
-        matlab -nodesktop -nodisplay -nosplash -r "addpath('/data/project/SPAIN/derivatives/squeeze/code');phys_merge('$raw_phys','$triggers','phys.txt');exit;" # add path to a folder containing phys_merge function, execute phys_merge, and quit matlab
+        matlab -nodesktop -nodisplay -nosplash -r "addpath('${dir}/code');phys_merge('$raw_phys','$triggers','phys.txt');exit;" # add path to a folder containing phys_merge function, execute phys_merge, and quit matlab
 
         done
     done
