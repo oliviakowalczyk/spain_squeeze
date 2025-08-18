@@ -31,5 +31,5 @@ for i in "${data[@]}"; do
 
     cd ${dir}/derivatives/preprocessing/${sub}/${ses}/${run}
 
-    matlab -nodesktop -nodisplay -nosplash -r "addpath('/data/project/SPAIN/derivatives/squeeze/code');apshiftfix('"$i"');exit;" # add path to a folder containing apshiftfix function, execute apshiftfix, and quit matlab
+    matlab -nodesktop -nodisplay -nosplash -r "addpath('${dir}/squeeze/code');apshiftfix('"$i"');exit;" # add path to a folder containing apshiftfix function, execute apshiftfix, and quit matlab
 done
