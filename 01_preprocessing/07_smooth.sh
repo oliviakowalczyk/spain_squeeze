@@ -8,8 +8,8 @@ if [ $# != 2 ] ; then
 fi
 
 # Paths
-dir="/data/project/SPAIN/derivatives/squeeze"
-code_dir="/data/project/SPAIN/derivatives/squeeze/code"
+dir="/root/dir"
+code_dir="/${dir}/code"
 
 echo "Starting..."
 
