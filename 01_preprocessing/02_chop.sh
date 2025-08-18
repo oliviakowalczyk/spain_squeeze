@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir="/data/project/SPAIN/derivatives/squeeze/"
+dir="/root/dir"
 
 # read subject, session, and z coordinate variables from a csv file
 while IFS="," read -r data chop_z; do
