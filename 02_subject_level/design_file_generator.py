@@ -2,18 +2,22 @@
 
 # This script will generate each subjects design.fsf
 # To run it: python design_file_generator 
+# Adapted from Jeanette Mumford's script at https://mumfordbrainstats.tumblr.com/post/137507143321/get-some-data-and-get-ready-to-learn-fsl
 
 import os
 import glob
 
-# directory all of the SPAIN## directories live in
-study_dir = "/data/project/SPAIN/derivatives/squeeze/derivatives/preprocessing/"
+# directory where your study lices
+root_dir = "/root/dir"
 
-# directory where all fsf files will live
-fsf_dir="/data/project/SPAIN/derivatives/squeeze/code/02_subject_level/design_files/"
+# path to where the sub-SPAIN## directories live
+study_dir = os.path.join(root_dir, "derivatives/preprocessing/")
+
+# path to where all fsf files will live
+fsf_dir = os.path.join(root_dir, "code/02_subject_level/design_files/")
 
 # get paths to your data folders
-sub_dirs=glob.glob("%s/sub-SPAIN[0-9][0-9]/ses-[A,B]/run-[1,2]"%(study_dir))
+sub_dirs = glob.glob("%s/sub-SPAIN[0-9][0-9]/ses-[A,B]/run-[1,2]"%(study_dir))
 
 for dir in list(sub_dirs):
   split_dir = dir.split('/') # split path string at each '/'
@@ -32,5 +36,3 @@ for dir in list(sub_dirs):
           for src, target in replacements.items():
             line = line.replace(src, target)
           outfile.write(line)
-  
-
