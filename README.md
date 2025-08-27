@@ -7,4 +7,4 @@ Full detail of the pipeline are availble in the above manuscript. Briefly, the c
 
 ## Data availability
 The participants in this study did not give their permission for data sharing, therefore raw data is not available. 
-Group-level statistical maps resulting from this analysis, can be found on [Neurovault](https://identifiers.org/neurovault.collection:21512).
+Group-level statistical maps resulting from this analysis, can be found on [Neurovault](https://identifiers.org/neurovault.collection:21749).
