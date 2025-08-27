@@ -36,3 +36,9 @@ for dir in list(sub_dirs):
           for src, target in replacements.items():
             line = line.replace(src, target)
           outfile.write(line)
+    with open("%s/design_template_paramod.fsf"%(fsf_dir)) as infile: 
+      with open("%s/design_%s_%s_%s_paramod.fsf"%(fsf_dir, sub_no, ses_no, run_no), 'w') as outfile:
+        for line in infile:
+          for src, target in replacements.items():
+            line = line.replace(src, target)
+          outfile.write(line)
