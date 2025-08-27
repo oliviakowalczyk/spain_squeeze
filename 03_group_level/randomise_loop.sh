@@ -2,6 +2,11 @@
 dir="/root/dir"
 sct_dir="/sct/dir/6.5"
 
+# randomise_parallel is a wrapper for fsl_sub
+# The default memory parameters might be too low and cause an out of memory error on SLURM
+# To avoid this set a memory requirement before running this:
+# setenv FSLSUB_MEMORY_REQUIRED "10G"
+
 for file in `ls ${dir}/derivatives/group_level/data_stacks/cope*stack.nii.gz`; do
     # Extract the filename without path
     filename=$(basename "$file")
