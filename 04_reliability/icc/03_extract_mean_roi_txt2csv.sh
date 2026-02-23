@@ -5,7 +5,7 @@ txt_dir="${dir}/derivatives/reliability/icc/mean_t"
 
 # Define order for sessions and ROIs
 sessions=("run-1-avg" "run-2-avg" "ses-A-avg" "ses-B-avg")
-roi_order=("cord" "network" "network_uncorr" "spinal_level_c5" "spinal_level_c6" "spinal_level_c7" "spinal_level_c8" "spinal_level_t1")
+roi_order=("cord" "network" "spinal_level_c5" "spinal_level_c6" "spinal_level_c7" "spinal_level_c8" "spinal_level_t1")
 
 # Collect all txt files and their column names
 declare -a file_list=()
@@ -22,15 +22,6 @@ for condition in "standard" "paramod"; do
                     col_name="${condition}_${roi}_${session}"
                 else
                     txt_file="${txt_dir}/cope1_${session}_paramod_network_mean.txt"
-                    col_name="${condition}_${roi}_${session}"
-                fi
-            # Network uncorrected files have different naming convention
-            elif [[ $roi == "network_uncorr" ]]; then
-                if [[ $condition == "standard" ]]; then
-                    txt_file="${txt_dir}/cope1_${session}_network_uncorr_mean.txt"
-                    col_name="${condition}_${roi}_${session}"
-                else
-                    txt_file="${txt_dir}/cope1_${session}_paramod_network_uncorr_mean.txt"
                     col_name="${condition}_${roi}_${session}"
                 fi
             else
